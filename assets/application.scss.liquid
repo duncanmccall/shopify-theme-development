@@ -8,8 +8,11 @@
 
 */
 
-
-
+@mixin body-font {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;    
+}
 
 
 
@@ -19,3 +22,21 @@
 
 */
 
+body {
+    @include body-font;
+}
+
+main {
+    padding: 28px
+}
+
+/*
+
+    Utilities
+
+*/
+
+.remove-bullets-from-list {
+    list-style-type: none;
+    padding: 0;
+}

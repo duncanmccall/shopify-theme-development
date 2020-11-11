@@ -1,15 +1,10 @@
-header
-
-{% schema %}
-    {
-        "name": "Header Settings",
-        "settings": [
-            {
-                "id": "header_text",
-                "type": "text",
-                "label": "Title",
-                "default": "Hello World!"
-            }
-        ]
-    }
-{% endschema %}
+{% assign menu = linklists.main-menu.links %}
+<nav>
+    <ul class="remove-bullets-from-list">
+        {% for link in menu %}
+            <li>
+                <a href="{{ link.url }}">{{ link.title }}</a>    
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
